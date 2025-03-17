@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			height: 100px;
+			width: 100px;
+			background-color: blue;
+			transition: 1s;
+			text-align: center;
+			font-size: 30px;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>Все операции выполняются с цифрой 5</h1>
+	<div style="display: flex">
+		<div class="box plus"> + </div>
+		<div class="box minus"> - </div>
+		<div class="box umnozh"> * </div>
+		<div class="box delenie"> : </div>
+	</div>
+	<h1 class="chislo"></h1>
+	<script>
+		//7. Есть число 100 и с ним надо сделать арифметические операции - сложение, вычитание, умножение, деление.
+		//Чтобы сделать деление - используй знак /
+		//чтобы сделать уможение используй знак *
+		let num = 100;
+		document.querySelector('.chislo').innerHTML = num;
+		document.querySelector('.plus').onclick = function(){
+			num = num + 5;
+			document.querySelector('.chislo').innerHTML = num;
+		};
+		document.querySelector('.minus').onclick = function(){
+			num = num - 5;
+			document.querySelector('.chislo').innerHTML = num;
+		};
+		document.querySelector('.umnozh').onclick = function(){
+			num = num * 5;
+			document.querySelector('.chislo').innerHTML = num;
+		};
+		document.querySelector('.delenie').onclick = function(){
+			num = num / 5;
+			document.querySelector('.chislo').innerHTML = num;
+		};
+
+		
+	</script>
+</body>
+</html>
